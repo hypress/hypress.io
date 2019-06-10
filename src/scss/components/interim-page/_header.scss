@@ -1,0 +1,30 @@
+.interim-page-header {
+  padding-left: calc(32px + 16px);
+  position:relative;
+}
+
+.interim-page-header__logo {
+  font-size: 0;
+  color: transparent;
+  display:block;
+  width:32px;
+  height:32px;
+  background: url(assets/images/hypress-logo.svg);
+  position:absolute;
+  left:0;
+  top:0;
+}
+
+.interim-page-header__lead {
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 1.25em;
+  margin-bottom: 16px;
+}
+
+.interim-page-header__intro {
+  font-size: 20px;
+  font-weight: 200;
+  margin-bottom: 16px;
+  line-height: 1.25em;
+}
