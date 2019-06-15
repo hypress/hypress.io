@@ -1,5 +1,10 @@
 .content {
   color: rgba(0, 0, 0, 0.8);
+  padding: $padding;
+
+  @include mq($from: desktop) {
+
+  }
 
   h1 {
     font-weight: 900;

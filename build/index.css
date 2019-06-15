@@ -164,7 +164,8 @@ pre {
   border-radius: 4px; }
 
 .content {
-  color: rgba(0, 0, 0, 0.8); }
+  color: rgba(0, 0, 0, 0.8);
+  padding: 16px; }
   .content h1 {
     font-weight: 900;
     font-size: 2em;
@@ -208,8 +209,13 @@ a {
   text-decoration: none; }
 
 main {
-  padding: 16px;
-  overflow: auto; }
+  overflow: auto;
+  box-sizing: border-box; }
+  @media (min-width: 61.25em) {
+    main {
+      display: grid;
+      grid-template-columns: 25% 75%;
+      padding: 16px 0; } }
 
 .aside {
   padding: 16px;
@@ -219,23 +225,34 @@ main {
   font-weight: bold; }
   @media (min-width: 61.25em) {
     .aside {
-      display: none; } }
+      background: none;
+      border: none; } }
 
 .aside__toggle {
   font-weight: 600;
   padding-right: 20px;
   background: url(assets/icon-caret-down.svg) right center no-repeat; }
+  @media (min-width: 61.25em) {
+    .aside__toggle {
+      display: none; } }
 
 .aside__nav {
   transition: 0.2s all;
   max-height: 0;
   overflow: hidden;
   opacity: 0; }
+  @media (min-width: 61.25em) {
+    .aside__nav {
+      opacity: 1;
+      max-height: 100%; } }
   .aside__nav ul li {
     border-bottom: 1px solid rgba(0, 0, 0, 0.1);
     padding: 0.25em 0;
     line-height: 1.5em;
     font-weight: 500; }
+    @media (min-width: 61.25em) {
+      .aside__nav ul li {
+        border-bottom: none; } }
     .aside__nav ul li:last-child {
       border-bottom: none; }
     .aside__nav ul li a {
@@ -253,15 +270,18 @@ main {
 .header {
   background-image: linear-gradient(225deg, #460B69 0%, #7F369B 100%);
   color: #fff;
-  display: flex;
+  /*
+  display:flex;
   justify-content: space-between;
-  flex-flow: row wrap; }
+  flex-flow: row wrap;
+  */ }
 
 .header__inner {
   display: flex;
   justify-content: space-between;
   flex-flow: row wrap;
-  padding: 16px; }
+  padding: 16px;
+  box-sizing: border-box; }
 
 .header__logo {
   font-size: 0;
@@ -270,8 +290,7 @@ main {
   height: 32px;
   background: url(assets/hypress-logo-white.svg) center center no-repeat;
   background-size: cover;
-  display: inline-block;
-  align-self: center; }
+  display: inline-block; }
 
 .header__toogle {
   border: none;
@@ -314,7 +333,8 @@ main {
         border-bottom: none;
         align-self: center;
         margin: 0;
-        padding: 0 16px; }
+        padding: 0 16px;
+        line-height: 2em; }
         .header__nav li:last-child {
           padding-right: 0; } }
   .header__nav a {

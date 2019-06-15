@@ -8,8 +8,9 @@ html
 
     body
         include ../components/header
-        include ../components/aside
 
-        main.content
-            != content
+        main
+            include ../components/aside
+            div.content
+                != content
         script(src="/index.js" type="text/javascript")

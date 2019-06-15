@@ -1,12 +1,8 @@
 aside.aside
-    button.aside__toggle(data-toggle-target="\[data-page-nav\]") Table of Contents
-    nav.aside__nav(data-page-nav data-toggle-class="aside__nav--open")
-        ul
-            li
-                a(href="/guides/getting-started.html") Getting Started
-            li
-                a(href="/guides/index.html") Guides
-            li
-                a(href="/guides/components.html") Components
-            li
-                a(href="/guides/documentation.html") Documentation
+    if toc.length > 0
+        button.aside__toggle(data-toggle-target="\[data-page-nav\]") Table of Contents
+        nav.aside__nav(data-page-nav data-toggle-class="aside__nav--open")
+            ul
+                each val in toc
+                    li
+                        a(href='' + val.slug) #{val.title}
