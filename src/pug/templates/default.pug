@@ -2,7 +2,7 @@ doctype html
 html
     head
         title= pageTitle
-        link(rel="stylesheet" href="/index.css" type="text/css")
+        link(rel="stylesheet" href=baseDir + "index.css" type="text/css")
         meta(name="description", content=description)
         meta( name='viewport', content='width=device-width, initial-scale=1' )
 
@@ -15,4 +15,4 @@ html
                 != content
 
         include ../components/footer
-        script(src="/index.js" type="text/javascript")
+        script(src=baseDir + "index.js" type="text/javascript")
