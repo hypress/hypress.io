@@ -1,8 +1,11 @@
-aside.aside
-    if toc.length > 0 && nosidebar !== "true"
-        button.aside__toggle(data-toggle-target="\[data-page-nav\]") Table of Contents
-        nav.aside__nav(data-page-nav data-toggle-class="aside__nav--open")
-            ul
-                each val in toc
-                    li
-                        a(href='' + val.slug) #{val.title}
+if nosidebar === "true"
+    aside
+else
+    aside.aside
+        if toc.length > 0
+            button.aside__toggle(data-toggle-target="\[data-page-nav\]") Table of Contents
+            nav.aside__nav(data-page-nav data-toggle-class="aside__nav--open")
+                ul
+                    each val in toc
+                        li
+                            a(href='' + val.slug) #{val.title}
