@@ -1,0 +1,21 @@
+<!DOCTYPE html><html><head><title>Getting started</title><link rel="stylesheet" href="/index.css" type="text/css"><meta name="description"><meta name="viewport" content="width=device-width, initial-scale=1"></head><body><header class="header"><div class="header__inner"><a href="/"><h1 class="header__logo">hypress</h1></a><button class="header__toogle" data-toggle-target="[data-main-nav]">Menu</button><nav class="header__nav" data-main-nav data-toggle-class="header__nav--open"><ul><li><a href="/guides/getting-started.html">Getting Started</a></li><li><a href="/guides/index.html">Guides</a></li><li><a href="/guides/components.html">Components</a></li><li><a href="/guides/documentation.html">Documentation</a></li></ul></nav></div></header><aside class="aside"><button class="aside__toggle" data-toggle-target="[data-page-nav]">Table of Contents</button><nav class="aside__nav" data-page-nav data-toggle-class="aside__nav--open"><ul><li><a href="/guides/getting-started.html">Getting Started</a></li><li><a href="/guides/index.html">Guides</a></li><li><a href="/guides/components.html">Components</a></li><li><a href="/guides/documentation.html">Documentation</a></li></ul></nav></aside><main class="content"><h1 id="getting-started">Getting started</h1>
+<h2 id="install-required-software">Install required software</h2>
+<p>This guide assumes you have an up to date node environment and npm
+installed. To run the generated project, you need Vagrant &amp; Ansible or Docker.</p>
+<h2 id="create-your-project">Create your project</h2>
+<p>To create a hypress drive project, install <a href="http://google.com">yeoman</a> and the 
+<a href="components.html#generator-hypress">hypress generator</a>.</p>
+<pre><code class="language-bash">npm install -g yeoman generator-hypress</code></pre>
+<p>Run the generator to create a customized project skelleton.</p>
+<pre><code class="language-bash">yo hypress</code></pre>
+<p>The generator will ask you for some information about your project 
+and tries to make suggestions. You can change all those settings
+later. </p>
+<h2 id="bring-up-your-environment">Bring up your environment</h2>
+<p>Navigate to the project folder and bring bring your vagrant box up.</p>
+<pre><code class="language-bash">vagrant up</code></pre>
+<p>This step may take several minutes, since most likely the base box
+must be downloaded. Once you vagrant box is running, a provision 
+playbook will be executed which will configure your machine
+with your desired settings.</p>
+</main><script src="/index.js" type="text/javascript"></script></body></html>

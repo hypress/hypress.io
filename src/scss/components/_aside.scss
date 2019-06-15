@@ -1,0 +1,57 @@
+.aside {
+  padding: $padding;
+  background: #efefef;
+  border-bottom: 1px solid #e1e1e1;
+  color: rgba(0, 0, 0, 0.75);
+  font-weight: bold;
+
+  @include mq($from: desktop) {
+    display:none;
+  }
+}
+
+.aside__toggle {
+  @extend .button-reset;
+  font-weight: 600;
+  // display:block;
+  // width:100%;
+
+  padding-right: 20px;
+
+  background: url(assets/icon-caret-down.svg) right center no-repeat;
+}
+
+.aside__nav {
+  transition: 0.2s all;
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+
+  ul {
+    li {
+      border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+      padding: 0.25em 0;
+      line-height: 1.5em;
+      font-weight: 500;
+
+      &:last-child {
+        border-bottom: none;
+      }
+
+      a {
+        transition: 0.2s all;
+        display:block;
+        &:hover {
+          color: #000;
+        }
+      }
+    }
+  }
+}
+
+.aside__nav--open {
+  display:block;
+  padding-top: $padding;
+  max-height: 300px;
+  opacity: 1;
+}

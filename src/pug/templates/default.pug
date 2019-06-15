@@ -1,0 +1,15 @@
+doctype html
+html
+    head
+        title= pageTitle
+        link(rel="stylesheet" href="/index.css" type="text/css")
+        meta(name="description", content=description)
+        meta( name='viewport', content='width=device-width, initial-scale=1' )
+
+    body
+        include ../components/header
+        include ../components/aside
+
+        main.content
+            != content
+        script(src="/index.js" type="text/javascript")

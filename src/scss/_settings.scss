@@ -1,0 +1,14 @@
+$space: 4px;
+
+$padding: $space*4;
+
+body * {
+  vertical-align: top;
+}
+
+$mq-breakpoints: (
+        mobile:  320px,
+        tablet:  740px,
+        desktop: 980px,
+        wide:    1300px
+);

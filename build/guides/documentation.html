@@ -1,0 +1,114 @@
+<!DOCTYPE html><html><head><title>Documentation</title><link rel="stylesheet" href="/index.css" type="text/css"><meta name="description"><meta name="viewport" content="width=device-width, initial-scale=1"></head><body><header class="header"><div class="header__inner"><a href="/"><h1 class="header__logo">hypress</h1></a><button class="header__toogle" data-toggle-target="[data-main-nav]">Menu</button><nav class="header__nav" data-main-nav data-toggle-class="header__nav--open"><ul><li><a href="/guides/getting-started.html">Getting Started</a></li><li><a href="/guides/index.html">Guides</a></li><li><a href="/guides/components.html">Components</a></li><li><a href="/guides/documentation.html">Documentation</a></li></ul></nav></div></header><aside class="aside"><button class="aside__toggle" data-toggle-target="[data-page-nav]">Table of Contents</button><nav class="aside__nav" data-page-nav data-toggle-class="aside__nav--open"><ul><li><a href="/guides/getting-started.html">Getting Started</a></li><li><a href="/guides/index.html">Guides</a></li><li><a href="/guides/components.html">Components</a></li><li><a href="/guides/documentation.html">Documentation</a></li></ul></nav></aside><main class="content"><h1 id="hypress-project-skeleton-v003">hypress-project-skeleton (v0.0.3)</h1>
+<p><img src="https://img.shields.io/badge/version-v0.0.3-violet.svg" alt="Version">
+<img src="https://img.shields.io/github/last-commit/hypress/project-skeleton.svg?style=flat" alt="Last commit">
+<img src="https://api.travis-ci.org/hypress/project-skeleton.svg?branch=develop" alt="Build status">
+<img src="https://img.shields.io/badge/wordpress-v5.0.3-blue.svg" alt="WordPress v5.0.3"></p>
+<p>A very basic project skeleton for hypress projects. The main goal is to keep as much as
+dependencies away from the host machine.</p>
+<p>The base project skeleton for <a href="https://github.com/hypress">hypress</a> driven WordPress projects.  </p>
+<p>This skeleton can be generated with the <a href="https://github.com/hypress/generator-hypress">yeoman hypress generator</a>.</p>
+<h2 id="requirements">Requirements</h2>
+<h3 id="vagrant">Vagrant</h3>
+<ol>
+<li><a href="https://www.virtualbox.org/">VirtualBox</a></li>
+<li><a href="https://www.vagrantup.com/">Vagrant</a></li>
+<li><a href="https://github.com/devopsgroup-io/vagrant-hostmanager">vagrant-hostmanager</a></li>
+</ol>
+<h3 id="docker">Docker</h3>
+<ol>
+<li><a href="https://docker.com">Docker</a></li>
+<li><a href="https://docs.docker.com/compose/install/">Docker Compose</a></li>
+</ol>
+<h2 id="install-dependencies-with-homebrew-macos">Install dependencies with homebrew (macOS)</h2>
+<p>Run</p>
+<pre><code class="language-bash">brew install cask
+brew cask install virtualbox vagrant
+vagrant plugin install vagrant-hostmanager</code></pre>
+<h2 id="getting-started">Getting started</h2>
+<p>You need a copy of all project files. Download it via github or just use the
+<a href="https://github.com/hypress/generator-hypress">yeoman hypress generator</a>.</p>
+<p>To bring your development stack up, just start the vagrant box.</p>
+<pre><code class="language-bash">vagrant up</code></pre>
+<p>Frontend: <a href="http://hypress.local">http://hypress.local</a><br>Backend: <a href="http://hypress.local/wp-admin">http://hypress.local/wp-admin</a><br>phpMyAdmin: <a href="http://hypress.local/phpmyadmin">http://hypress.local/phpmyadmin</a></p>
+<table>
+<thead>
+<tr>
+<th>Endpoint</th>
+<th>URL</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Frontend</td>
+<td><a href="http://hypress.local">http://hypress.local</a></td>
+</tr>
+<tr>
+<td>Backend</td>
+<td><a href="http://hypress.local/wp-admin">http://hypress.local/wp-admin</a></td>
+</tr>
+<tr>
+<td>phpMyAdmin</td>
+<td><a href="http://hypress.local/phpmyadmin">http://hypress.local/phpmyadmin</a></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><strong>Docker</strong> Frontend</td>
+<td><a href="http://hypress.localhost">http://hypress.localhost</a></td>
+</tr>
+<tr>
+<td><strong>Docker</strong> Backend</td>
+<td><a href="http://hypress.localhost/wp-admin">http://hypress.localhost/wp-admin</a></td>
+</tr>
+<tr>
+<td><strong>Docker</strong> phpMyAdmin</td>
+<td><a href="http://hypress.localhost/phpmyadmin">http://hypress.localhost/phpmyadmin</a></td>
+</tr>
+</tbody></table>
+<table>
+<thead>
+<tr>
+<th>Credential</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>MySQL user</td>
+<td><code>hypress</code></td>
+</tr>
+<tr>
+<td>MySQL password</td>
+<td><code>hypress</code></td>
+</tr>
+<tr>
+<td>MySQL database</td>
+<td><code>hypress</code></td>
+</tr>
+<tr>
+<td>WordPress user</td>
+<td><code>hypress</code></td>
+</tr>
+<tr>
+<td>WordPress password</td>
+<td><code>hypress</code></td>
+</tr>
+</tbody></table>
+<h2 id="enable-local-https-vagrant-only">Enable local https (Vagrant only)</h2>
+<p>To get local https, you can utilize <a href="https://github.com/FiloSottile/mkcert">mkcert</a>. Follow the link for installation instructions.</p>
+<p>After installing mkcert and creating a local CA create a certificate for hypress.</p>
+<pre><code class="language-bash">cd .hypress/
+mkcert hypress.local</code></pre>
+<p>If you ran <code>vagrant up</code> already, you need to provision the box again.</p>
+<pre><code class="language-bash">vagrant provision</code></pre>
+<h2 id="plugin-development">Plugin development</h2>
+<p>If you want to use this setup for WordPress plugin development, change the
+<code>hypress_type</code> variable in <code>./.hypress/ansible/settings.yml</code> from <code>theme</code>
+to <code>plugin</code>.</p>
+<h2 id="bundle-your-theme-or-plugin">Bundle your theme or Plugin</h2>
+<p>To create a production ready release, just run</p>
+<pre><code class="language-bash">npm run bundle</code></pre>
+<p>You&#39;ll find a ready to use bundle in <code>./dist</code>.</p>
+<h2 id="contributing">Contributing</h2>
+<p>This projects is open for contributions.</p>
+</main><script src="/index.js" type="text/javascript"></script></body></html>
