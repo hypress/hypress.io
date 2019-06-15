@@ -1,0 +1,58 @@
+.content {
+  color: rgba(0, 0, 0, 0.8);
+  padding: $padding;
+
+  @include mq($from: desktop) {
+
+  }
+
+  h1 {
+    font-weight: 900;
+    font-size: 2em;
+    line-height: 1.25em;
+    margin-bottom: $padding;
+  }
+
+  h2 {
+    font-weight: 900;
+    font-size: 1.75em;
+    line-height: 1.25em;
+    margin-bottom: $padding;
+  }
+
+  h3 {
+    font-weight: 900;
+    font-size: 1.5em;
+    line-height: 1.25em;
+    margin-bottom: $padding;
+  }
+
+  h4 {
+    font-weight: 900;
+    font-size: 1.25em;
+    line-height: 1.25em;
+    margin-bottom: $padding;
+  }
+
+  h5 {
+    font-weight: 700;
+    font-size: 1em;
+    line-height: 1.25em;
+    margin-bottom: $padding;
+  }
+
+  p, pre, ul, ol, table {
+    margin-bottom: $padding;
+    line-height: 1.25em;
+
+    & + h1, & + h2, & + h3, & + h4, & + h5 {
+      margin-top: $padding*2;
+    }
+
+    a {
+      text-decoration: underline;
+    }
+  }
+
+
+}

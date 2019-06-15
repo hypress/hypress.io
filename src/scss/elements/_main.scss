@@ -1,0 +1,12 @@
+main {
+  @extend .container;
+  // padding: $padding;
+  overflow: auto;
+  box-sizing: border-box;
+
+  @include mq($from: desktop) {
+    display:grid;
+    grid-template-columns: 25% 75%;
+    padding: $padding 0;
+  }
+}

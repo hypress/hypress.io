@@ -1,0 +1,54 @@
+Arguments: 
+  /usr/local/Cellar/node/12.1.0/bin/node /usr/local/Cellar/yarn/1.16.0/libexec/bin/yarn.js run dev
+
+PATH: 
+  /usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Users/cemderin/Projekte/Code/hypress.github.io/node_modules/.bin
+
+Yarn version: 
+  1.16.0
+
+Node version: 
+  12.1.0
+
+Platform: 
+  darwin x64
+
+Trace: 
+  SyntaxError: /Users/cemderin/Projekte/Code/hypress.github.io/package.json: Unexpected token } in JSON at position 568
+      at JSON.parse (<anonymous>)
+      at /usr/local/Cellar/yarn/1.16.0/libexec/lib/cli.js:1625:59
+      at Generator.next (<anonymous>)
+      at step (/usr/local/Cellar/yarn/1.16.0/libexec/lib/cli.js:304:30)
+      at /usr/local/Cellar/yarn/1.16.0/libexec/lib/cli.js:315:13
+
+npm manifest: 
+  {
+    "name": "hypress.github.io",
+    "version": "0.0.0",
+    "description": "hypress project page",
+    "main": "index.js",
+    "directories": {
+      "doc": "docs"
+    },
+    "repository": {
+      "type": "git",
+      "url": "git+https://cemderin@github.com/cemderin/hypress.github.io.git"
+    },
+    "author": "",
+    "license": "ISC",
+    "bugs": {
+      "url": "https://github.com/cemderin/hypress.github.io/issues"
+    },
+    "homepage": "https://github.com/cemderin/hypress.github.io#readme",
+    "devDependencies": {
+    },
+    "scripts": {
+      "dev": "node node_modules/static-site-generator"
+    },
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile

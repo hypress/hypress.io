@@ -1,0 +1,20 @@
+.button-reset {
+  color: inherit;
+  border:none;
+  font-size: 1em;
+  background: none;
+  line-height: 1.25em;
+  height:1.25em;
+  font-family: Montserrat;
+  padding:0;
+  margin:0;
+  text-align: left;
+
+  &:focus {
+    outline: none;
+  }
+}
+
+button.reset {
+  @extend .button-reset;
+}

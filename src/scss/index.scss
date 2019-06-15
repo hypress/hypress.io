@@ -1,5 +1,20 @@
-@import "~reset.css/reset.css";
+@import "../../node_modules/reset-css/sass/reset";
+@import "../../node_modules/highlight.js/styles/a11y-dark";
 
-@import "elements/document";
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700,900&display=swap');
+
+@import "settings";
+@import "../../node_modules/sass-mq/mq";
+
+
+@import "elements/body";
+@import "elements/button";
+@import "elements/code";
+@import "elements/content";
+@import "elements/container";
 @import "elements/links";
-@import "components/interim-page";
+@import "elements/main";
+
+@import "components/aside";
+@import "components/footer";
+@import "components/header";
