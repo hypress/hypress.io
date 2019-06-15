@@ -18,7 +18,8 @@
   "homepage": "https://github.com/cemderin/hypress.github.io#readme",
   "devDependencies": {},
   "scripts": {
-    "dev": "node node_modules/static-site-generator"
+    "dev": "node node_modules/static-site-generator --mode=development",
+    "build": "node node_modules/static-site-generator --base-dir=/build/"
   },
   "dependencies": {
     "highlight.js": "^9.15.8",
