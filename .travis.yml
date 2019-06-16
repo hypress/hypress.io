@@ -1,5 +1,3 @@
-dist: xenial
-
 node_js:
   - 10
 
