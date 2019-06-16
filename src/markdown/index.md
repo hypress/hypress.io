@@ -56,3 +56,8 @@ time.
 
 ## Next steps
 The generator has generated an individual README.md file. Please read carefully to use your hypress instance.
+
+### Check out the components
+- [generator-hypress](https://github.com/hypress/generator-hypress)
+- [project-skeleton](https://github.com/hypress/project-skeleton)
+- [hypress-base-theme](https://github.com/hypress/hypress-base-theme)
