@@ -19,7 +19,7 @@
   "devDependencies": {},
   "scripts": {
     "dev": "node node_modules/@cemderin/static-site-generator --mode=development",
-    "build": "node node_modules/@cemderin/static-site-generator --base-dir=/build/"
+    "build": "node node_modules/@cemderin/static-site-generator"
   },
   "dependencies": {
     "@cemderin/static-site-generator": "^0.0.0",
