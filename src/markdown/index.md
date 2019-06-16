@@ -8,7 +8,7 @@ hypress is a modern WordPress development toolchain coming as an all in one bund
 
 ## Install hypress
 To create a hypress project, we recommend to use the hypress generator. Install it by executing the
-follwing command in your terminal.
+follwing command in your terminal.  
 
 ```bash
 npm install -g yeoman generator-hypress
