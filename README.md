@@ -1,5 +1,7 @@
-# hypress project page
+# hypress.io
 [![Netlify Status](https://api.netlify.com/api/v1/badges/a4a20817-c0fe-434f-8f09-5429e30ee8a0/deploy-status)](https://app.netlify.com/sites/hypress-io/deploys)
+[![Build_Status](https://api.travis-ci.org/hypress/hypress.io.svg?branch=master)](https://travis-ci.org/hypress/hypress.io)
+[![Last commit](https://img.shields.io/github/last-commit/hypress/hypress.io.svg?style=flat)](https://github.com/hypress/hypress.io)
 
 This repository represents the source of the [hypress] project page.
 
