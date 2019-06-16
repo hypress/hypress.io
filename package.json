@@ -18,10 +18,11 @@
   "homepage": "https://github.com/cemderin/hypress.github.io#readme",
   "devDependencies": {},
   "scripts": {
-    "dev": "node node_modules/static-site-generator --mode=development",
-    "build": "node node_modules/static-site-generator --base-dir=/build/"
+    "dev": "node node_modules/@cemderin/static-site-generator --mode=development",
+    "build": "node node_modules/@cemderin/static-site-generator --base-dir=/build/"
   },
   "dependencies": {
+    "@cemderin/static-site-generator": "^0.0.0",
     "highlight.js": "^9.15.8",
     "reset-css": "^4.0.1",
     "reset.css": "^2.0.2",
