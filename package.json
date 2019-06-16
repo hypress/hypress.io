@@ -30,8 +30,10 @@
     "reset.css": "^2.0.2",
     "sass-mq": "^5.0.0"
   },
-  "hooks": {
-    "pre-push": "yarn test",
-    "post-merge": "yarn"
+  "husky": {
+    "hooks": {
+      "pre-push": "yarn test",
+      "post-merge": "yarn"
+    }
   }
 }
