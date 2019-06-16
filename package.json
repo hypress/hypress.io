@@ -1,5 +1,5 @@
 {
-  "name": "hypress.github.io",
+  "name": "hypress.io",
   "version": "0.0.0",
   "description": "hypress project page",
   "main": "index.js",
@@ -8,24 +8,30 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://cemderin@github.com/cemderin/hypress.github.io.git"
+    "url": "git+https://github.com/hypress/hypress.io.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/cemderin/hypress.github.io/issues"
+    "url": "https://github.com/hypress/hypress.io/issues"
   },
-  "homepage": "https://github.com/cemderin/hypress.github.io#readme",
+  "homepage": "https://github.com/hypress/hypress.io#readme",
   "devDependencies": {},
   "scripts": {
     "dev": "node node_modules/@cemderin/static-site-generator --mode=development",
-    "build": "node node_modules/@cemderin/static-site-generator"
+    "build": "node node_modules/@cemderin/static-site-generator",
+    "test": "node node_modules/@cemderin/static-site-generator"
   },
   "dependencies": {
     "@cemderin/static-site-generator": "^0.0.0",
     "highlight.js": "^9.15.8",
+    "husky": "^2.4.1",
     "reset-css": "^4.0.1",
     "reset.css": "^2.0.2",
     "sass-mq": "^5.0.0"
+  },
+  "hooks": {
+    "pre-push": "yarn test",
+    "post-merge": "yarn"
   }
 }
