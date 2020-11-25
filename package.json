@@ -24,7 +24,7 @@
   },
   "dependencies": {
     "@cemderin/static-site-generator": "^0.0.1",
-    "highlight.js": "^9.15.8",
+    "highlight.js": "^10.1.2",
     "husky": "^2.4.1",
     "reset-css": "^4.0.1",
     "reset.css": "^2.0.2",
